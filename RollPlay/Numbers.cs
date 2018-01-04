@@ -9,13 +9,13 @@ namespace RollPlay
     class Numbers
     {
         Random rand = new Random();
-
+       
         public int[] ThrowDice(int numberOfThrows)
         {
             int[] randomNumberArray = new int[numberOfThrows];
             for (int i = 0; i < numberOfThrows; i++)
             {
-                randomNumberArray[i] = rand.Next(1, 6);
+                randomNumberArray[i] = rand.Next(0, 7);
             }
             return randomNumberArray;
         }
@@ -25,7 +25,7 @@ namespace RollPlay
             int[] randomNumberArray = new int[numberOfThrows];
             for (int i=0; i < numberOfThrows; i++ )
             {
-                randomNumberArray[i] = rand.Next(1, diceSides);
+                randomNumberArray[i] = rand.Next(0, diceSides+1);
             }
             return randomNumberArray;
         }
@@ -39,7 +39,7 @@ namespace RollPlay
             int[] randomNumberArray = new int[numberOfThrows];
             for (int i = 0; i < numberOfThrows; i++)
             {
-                randomNumberArray[i] = rand.Next(1, diceSides);
+                randomNumberArray[i] = rand.Next(0, diceSides+1);
             }
             return randomNumberArray;
         }
